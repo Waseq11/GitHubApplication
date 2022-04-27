@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MWFinalProject2022.SignUp"
+             NavigationPage.HasNavigationBar="False">
+    
+    <ContentPage.Content>
+        <ScrollView HeightRequest="3000">
+            <StackLayout>
+                <StackLayout>
+                    <BoxView BackgroundColor="White" HeightRequest="30"/>
+                </StackLayout>
+
+                <StackLayout>
+                    <Frame
+                        CornerRadius="25"
+                        Padding="0"
+                        HorizontalOptions="Center"
+                        BackgroundColor="Transparent">
+                        <Image x:Name="avatar" Source="profile.png"/>
+                    </Frame>
+                </StackLayout>
+
+                <StackLayout>
+                    <SearchBar Placeholder="Git Username" Text="" SearchButtonPressed="SearchBar_SearchButtonPressed"/>
+                    <ActivityIndicator x:Name="actIndicator" Color="DodgerBlue"/>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" Padding="15">
+                    <Entry x:Name="txtUsername" Placeholder="Username" HorizontalTextAlignment="Start" HorizontalOptions="FillAndExpand"/>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" Padding="15">
+                    <Entry x:Name="txtPassword" Placeholder="Password" HorizontalTextAlignment="Start" HorizontalOptions="FillAndExpand" IsPassword="True"/>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" Padding="15">
+                    <Entry x:Name="txtRepeatPassword" Placeholder="Repeat Password" HorizontalTextAlignment="Start" HorizontalOptions="FillAndExpand" IsPassword="True"/>
+                </StackLayout>
+
+                <StackLayout>
+                    <Button x:Name="btnCreate" Text="Create" BackgroundColor="DarkOrange" TextColor="Black" FontSize="20" CornerRadius="14" Margin="10" Clicked="btnCreate_Clicked"/>
+                    <Button x:Name="btnCancel" Text="Cancel" BackgroundColor="DarkOrange" TextColor="Black" FontSize="20" CornerRadius="14" Margin="10" Clicked="btnCancel_Clicked"/>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
